@@ -1,4 +1,7 @@
-//higher order function => There are functions which take another functions as arguments these are called higher order functions
+/*
+    higher order function => There are functions which take another functions as arguments or returns
+    the functions 
+*/
 
 function f(x,fn){
     /*
