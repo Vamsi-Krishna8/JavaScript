@@ -10,9 +10,9 @@
 */
 
 console.log("Hi");
-setTimeout(function (){
-    console.log("Timeout");
-},4000);
+setTimeout(function () {
+  console.log("Timeout");
+}, 4000);
 console.log("Bye");
 
 /*
@@ -24,19 +24,19 @@ console.log("Bye");
         (JS dint wait at line no 13(setTimeout)) Whyy ???
 */
 
-function timeByLoop(){
-    console.log("loop Starts");
-    for(let i=0;i<10000000000;i++){
-        //some task
-    }
-    console.log("loop ends");
+function timeByLoop() {
+  console.log("loop Starts");
+  for (let i = 0; i < 10000000000; i++) {
+    //some task
+  }
+  console.log("loop ends");
 }
 
-function timeByRuntimeFeature(){
-    console.log("Starting timer");
-    setTimeout(function exec(){
-        console.log("Completed by timer");
-    },5000);
+function timeByRuntimeFeature() {
+  console.log("Starting timer");
+  setTimeout(function exec() {
+    console.log("Completed by timer");
+  }, 5000);
 }
 
 console.log("Hi");

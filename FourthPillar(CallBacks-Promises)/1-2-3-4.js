@@ -5,21 +5,21 @@
     fn => function
 */
 
-
-function fun(x,fn){
-    for(let i=0;i<x;i++){
-        console.log(i);
-    }
-    fn();
+function fun(x, fn) {
+  for (let i = 0; i < x; i++) {
+    console.log(i);
+  }
+  fn();
 }
 
-fun(10,function exec(){ //exec is a callBack function
-    console.log("I am executed");
+fun(10, function exec() {
+  //exec is a callBack function
+  console.log("I am executed");
 });
 
-setTimeout(function rn(){
-    console.log("Hello");
-},4000); //after 4000ms rn() function is executed
+setTimeout(function rn() {
+  console.log("Hello");
+}, 4000); //after 4000ms rn() function is executed
 
 /* Disadvantage of callBacks
     => Inversion of control
@@ -30,12 +30,12 @@ setTimeout(function rn(){
 
 //INVERSION OF CONTROL
 
-function doTask(fn,x){
-    //whole implementation is done by TeamA
-    fn(x*x);
+function doTask(fn, x) {
+  //whole implementation is done by TeamA
+  fn(x * x);
 }
 
-doTask(function exec(num){
-    console.log("Number is",num);
-},9) // Due to callbacks,I am passing control of how exec should be called to doTask this is inversion of control and it is a 
-    //bad practice
+doTask(function exec(num) {
+  console.log("Number is", num);
+}, 9); // Due to callbacks,I am passing control of how exec should be called to doTask this is inversion of control and it is a
+//bad practice
