@@ -15,26 +15,26 @@
 
 // passing a function ( just give the name of the function) ==> f
 //calling a function f()
-//example arr.map(square) this is passing a function and "square()" this is calling a function 
+//example arr.map(square) this is passing a function and "square()" this is calling a function
 
-function square(ele){
-    return ele*ele; //returns square of the number
+function square(ele) {
+  return ele * ele; //returns square of the number
 }
 
-function cube(ele){
-    return ele*ele*ele;
+function cube(ele) {
+  return ele * ele * ele;
 }
 
-function isEven(x){
-    return x%2==0 ? "Even" : "Odd";
+function isEven(x) {
+  return x % 2 == 0 ? "Even" : "Odd";
 }
 
-const arr=[1,2,3,4,5];
-const res=arr.map(square); //square is the function passed as an argument
+const arr = [1, 2, 3, 4, 5];
+const res = arr.map(square); //square is the function passed as an argument
 console.log(res);
 
-const cubeRes=arr.map(cube);
+const cubeRes = arr.map(cube);
 console.log(cubeRes);
 
-const isEvenRes=arr.map(isEven);
+const isEvenRes = arr.map(isEven);
 console.log(isEvenRes);
