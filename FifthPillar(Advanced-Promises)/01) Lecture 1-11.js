@@ -82,4 +82,23 @@ p.then(
 => At any point of time if event loop has a choice to pick from micro task queue
 or call back queue(macro-task queue) then it always gives preference to micro-task
 queue.
+
+==> If you get only 1 function as callBack in the .then function then that will 
+    be of fulfillment handler
+
+==>Priority Order
+
+CallStack(globalCode) > Microtask queue > CallBackStack/MacroTaskQueue 
 */
+
+function f() {
+  return new Promise(function exec(resolve, reject) {
+    resolve("Hello");
+  });
+}
+
+//The above code can also be written as
+
+let x = Promise.resolve("Hello");
+//this will give u a already resolved promise whose state is fulfilled and value is passed argument in the above code it is "Hello"
+//onfullfillment and onrejection arrays are empty
