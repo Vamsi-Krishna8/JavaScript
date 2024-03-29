@@ -33,14 +33,15 @@ function uploadData(file, url) {
   });
 }
 
-let x=downloadData("www.xyz.com");
-let y=x.then(function processDownload(){
-    console.log("Donwloading doen with following value",value);
-    return writeFile(value);
-})
-let w=y.then(function processWrite(value){
-    console.log("data written in the file with name",value);
-})
-let q=w.then(function processUpload(Value){
-    console.log("we have uploaded with value",value);
-})
+let x = downloadData("www.xyz.com");
+let y = x.then(function processDownload() {
+  console.log("Downloading done with following value", value);
+  return writeFile(value);
+});
+let w = y.then(function processWrite(value) {
+  console.log("data written in the file with name", value);
+  return uploadData(value, "www.abc.com");
+});
+let q = w.then(function processUpload(value) {
+  console.log("we have uploaded with value", value);
+});
